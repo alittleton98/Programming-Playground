@@ -71,5 +71,3 @@ def predictSurvial(passengerNumber):
 
 
 survivalPercentageCalculation()
-predictSurvial(98)
-
