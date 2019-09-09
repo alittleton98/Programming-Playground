@@ -34,12 +34,18 @@ def survivalVariablePercentage(variable, variableColumn):
     return percentage
 
 
-def determineSurvivalScore():
+def determineSurvivalScore(row):
     survivalScore = 100
+    for x in data[row, range(0, 2)]:
+        intermediate = survivalVariablePercentage(titanicData[row, x], x)
+        deduction = 100 - intermediate
+        survivalScore -= deduction
+    return survivalScore
 
 
 def predictSurvial(passengerNumber):
     passengerNumber += 1
+    return determineSurvivalScore(passengerNumber)
 
 
 survivalPercentageCalculation()
