@@ -36,7 +36,7 @@ def survivalVariablePercentage(variable, variableColumn):
 
 def determineSurvivalScore(row):
     survivalScore = 100
-    for x in data[row, range(0, 2)]:
+    for x in titanicData[row, range(0, 2)]:
         intermediate = survivalVariablePercentage(titanicData[row, x], x)
         deduction = 100 - intermediate
         survivalScore -= deduction
