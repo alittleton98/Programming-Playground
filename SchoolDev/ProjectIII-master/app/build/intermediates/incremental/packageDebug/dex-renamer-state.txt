@@ -1,0 +1,4 @@
+#Thu Oct 18 13:37:22 CDT 2018
+base.0=/Users/andrewlittletondev/Dev/SchoolDev/ProjectIII-master/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/andrewlittletondev/Dev/SchoolDev/ProjectIII-master/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
