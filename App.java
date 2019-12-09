@@ -7,14 +7,16 @@ public class App{
     
         
     
-    while ()    
-    System.out.println ("Please enter the message you would like decoded");
+    do {
+        System.out.println ("Please enter the message you would like decoded");
     String message = user.nextLine();
     System.out.println ("This is the message you entered: " + message);
     
     String exit = user.nextLine();
         if (exit == "yes"){
             break;
-        }      
+        }
+    } while (message != "stop");    
+          
     }
 }
