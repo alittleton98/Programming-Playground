@@ -3,5 +3,7 @@
     "python.formatting.provider": "black",
     "files.associations": {
         "iostream": "cpp"
-    }
+    },
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.syncWithFolderExplorer": true
 }
