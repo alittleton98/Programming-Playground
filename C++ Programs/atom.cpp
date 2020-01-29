@@ -1,5 +1,5 @@
 //Class for Natural Element Objects
-#include <atom.h>
+#include "atom.h"
 
 class atom
 {
