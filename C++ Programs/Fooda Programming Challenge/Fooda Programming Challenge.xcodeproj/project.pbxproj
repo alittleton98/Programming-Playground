@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443EC0BD23E90F4500495669 /* TernaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 443EC0BB23E90F4500495669 /* TernaryTree.cpp */; };
 		446341A123E7836A0034A0D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446341A023E7836A0034A0D6 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		443EC0BA23E8B09E00495669 /* TernaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TernaryTree.h; sourceTree = "<group>"; };
+		443EC0BB23E90F4500495669 /* TernaryTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TernaryTree.cpp; sourceTree = "<group>"; };
+		443EC0BC23E90F4500495669 /* TernaryTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TernaryTree.hpp; sourceTree = "<group>"; };
 		4463419D23E7836A0034A0D6 /* Fooda Programming Challenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Fooda Programming Challenge"; sourceTree = BUILT_PRODUCTS_DIR; };
 		446341A023E7836A0034A0D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				446341A023E7836A0034A0D6 /* main.cpp */,
-				443EC0BA23E8B09E00495669 /* TernaryTree.h */,
+				443EC0BB23E90F4500495669 /* TernaryTree.cpp */,
+				443EC0BC23E90F4500495669 /* TernaryTree.hpp */,
 			);
 			path = "Fooda Programming Challenge";
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				446341A123E7836A0034A0D6 /* main.cpp in Sources */,
+				443EC0BD23E90F4500495669 /* TernaryTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

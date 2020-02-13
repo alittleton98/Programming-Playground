@@ -7,9 +7,7 @@
 //
 
 #include <iostream>
-#include "TernaryTree.h"
-
-
+#include "TernaryTree.hpp"
 
 
 
@@ -17,9 +15,14 @@ int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
     return 0;
     
-    int testTree [10] = {9, 3, 4, 1, 6, 8, 9, 3, 4, 2};
+    int treeToPass [10] = {9, 3, 4, 1, 6, 8, 9, 3, 4, 2};
+    node treeToBuild [10];
+    node newNode {10};
+    
+    TernaryTree::buildTree(treeToPass, treeToBuild);
+    
 
-}
+};
 
 
 
