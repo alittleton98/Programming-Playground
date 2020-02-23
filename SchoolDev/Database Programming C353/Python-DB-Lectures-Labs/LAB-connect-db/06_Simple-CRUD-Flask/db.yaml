@@ -1,0 +1,5 @@
+mysql_host: 'localhost'
+mysql_user: 'cfn'
+# Enter your password in field below
+mysql_password: 'naiman'
+mysql_db: 'company'
