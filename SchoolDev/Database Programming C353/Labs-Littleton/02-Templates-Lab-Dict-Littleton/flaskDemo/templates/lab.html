@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for favSnacks in favSnacks %}
+<article class="media content-section">
+    <div class="media-body">
+        <h2><a class="article-title" href="#">Here are some of {{ title }}'s snacks</a></h2>
+        <div class="article-metadata">
+            <p class="article-content">{{ favSnacks[1].snack favSnacks[1].calories}}</p>
+            <p class="article-content">{{ favSnacks[2].snack favSnacks[2].calories}}</p>
+            <p class="article-content">{{ favSnacks[3].snack favSnacks[3].calories}}</p>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}
