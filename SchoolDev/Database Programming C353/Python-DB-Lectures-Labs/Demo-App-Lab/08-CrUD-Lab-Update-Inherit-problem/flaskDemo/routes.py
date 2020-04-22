@@ -141,7 +141,7 @@ def update_dept(dnumber):
         return redirect(url_for('dept', dnumber=dnumber))
     elif request.method == 'GET':              # notice we are not passing the dnumber to the form
 
-        form.dnumber.data = dept.dnumber
+ #       form.dnumber.data = dept.dnumber
         form.dname.data = dept.dname
         form.mgr_ssn.data = dept.mgr_ssn
         form.mgr_start.data = dept.mgr_start

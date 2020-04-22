@@ -22,7 +22,6 @@ namespace AppTest
         {
             count++;
             ((Button)sender).Text = $"You clicked {count} times.";
-            
         }
     }
 }

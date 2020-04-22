@@ -3,3 +3,4 @@ mysql_user: 'cfn'
 # Enter your password in field below
 mysql_password: 'naiman'
 mysql_db: 'company'
+MYSQL_CURSORCLASS: 'DictCursor'

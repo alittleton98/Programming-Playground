@@ -18,17 +18,17 @@ posts = [
 ]
 favSnacks = list() 
 Snack1 = dict() 
-Snack['snack']="Lime Chips" 
-Snack['calories'] = 250 
-Snacks.append(Snack) 
-Snack=dict() 
-Snack['snack']="honey roasted peanuts" 
-Snack['calories'] = 202 
-Snacks.append(Snack) 
-Snack=dict() 
-Snack['snack']="toast"
-Snack['calories'] = 50
-Snacks.append(Snack) 
+Snack1['snack']="Lime Chips" 
+Snack1['calories'] = 250 
+favSnacks.append(Snack1) 
+Snack2=dict() 
+Snack2['snack']="honey roasted peanuts" 
+Snack2['calories'] = 202 
+favSnacks.append(Snack2) 
+Snack3=dict() 
+Snack3['snack']="toast"
+Snack3['calories'] = 50
+favSnacks.append(Snack3) 
 
 #favSnacks = [["Lime Chips", 250], ["honey roasted peanuts", 200], ["toast", 50]]
 

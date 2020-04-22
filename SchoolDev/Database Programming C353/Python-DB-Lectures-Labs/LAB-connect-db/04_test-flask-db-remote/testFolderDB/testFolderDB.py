@@ -16,7 +16,7 @@ def hello():
             cursor = conn.cursor()
         else:
             return('problem')
-        cursor.execute("SELECT * FROM faculty")
+        cursor.execute("SELECT * FROM course")
         
         row = cursor.fetchone()
         returnString=str(row)

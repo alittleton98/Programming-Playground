@@ -11,14 +11,16 @@ def connect():
                                        password='student453')
         if conn.is_connected():
             print('Connected to MySQL database')
-            cursor = conn.cursor()
+            cursor = conn.cursor(dictionary = True)
         cursor.execute("SELECT * FROM course")
  
         row = cursor.fetchone()
  
         while row is not None:
             print(row)
+            print(row['courseName'])
             row = cursor.fetchone()
+            
  
     
  
