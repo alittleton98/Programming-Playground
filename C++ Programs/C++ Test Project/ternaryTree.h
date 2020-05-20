@@ -11,7 +11,7 @@ class ternaryTree
 
     public:
         node static createNode(int);
-        void static buildTree(int[]);
+        node* static buildTree(int[]);
         node static getNode(int nodeValue);
         //void static determineNodeType(node*);
         void static insert(node);

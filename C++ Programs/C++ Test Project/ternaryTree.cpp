@@ -39,22 +39,43 @@ public:
     };
     */
     //buildTree method V2
-    void static buildTree(int* arr) {
-        node nodeArray[sizeof(arr)] = {};
+    node* static buildTree(int* arr) {
+        node tree[sizeof(arr)] = {};
+        node root;
         for (int i = 0; i < sizeof(arr); i++) {
-           //each middle node iterating by 3 starting at position 0
+            if (&tree[0] == nullptr) {
+                root.value = arr[i];
+                tree[i] = root;
+            }
+            //nest cobditional for
+            if (arr[i] < root.value) {
+                node node;
+                node.value = arr[i];
+                root.leftChild = &node;
+
+            }
+
+            if (arr[i] > root.value) {
+                node node;
+                node.value = arr[i];
+                root.rightChild = &node;
+            }
+
+            if (arr[i] == root.value && &root != nullptr) {
+                node node;
+                node.value = arr[i];
+                node.parent = &root;
+            }
+
         }
-        for (int i = 0; i < sizeof(arr); i++) {
-            //each left node iterating by 3 starting at position 1
-        }
-        for (int i = 0; i < sizeof(arr); i++) {
-            //each right node iterating by 3 starting at position 2
-        }
+       
+        return tree;
     }
 
     void insert(int n) {
         node newNode{ n };
         //dynamic memory adjustment
+
         //add 
     };
 
