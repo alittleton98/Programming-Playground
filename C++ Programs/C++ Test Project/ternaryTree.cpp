@@ -5,6 +5,8 @@ class ternaryTree {
 
 
 public:
+    int size;
+    int height;
 
 
     //constructor
@@ -39,7 +41,7 @@ public:
     };
     */
     //buildTree method V2
-    node* static buildTree(int* arr) {
+    node* buildTree(int* arr) {
         node tree[sizeof(arr)] = {};
         node root;
         for (int i = 0; i < sizeof(arr); i++) {
@@ -47,20 +49,24 @@ public:
                 root.value = arr[i];
                 tree[i] = root;
             }
-            //nest cobditional for
-            if (arr[i] < root.value) {
-                node node;
-                node.value = arr[i];
-                root.leftChild = &node;
 
+            if (root.leftChild == nullptr) {
+                if (arr[i] < root.value) {
+                    node node;
+                    node.value = arr[i];
+                    root.leftChild = &node;
+
+                }
             }
 
-            if (arr[i] > root.value) {
-                node node;
-                node.value = arr[i];
-                root.rightChild = &node;
+            if (root.rightChild == nullptr) {
+                if (arr[i] > root.value) {
+                    node node;
+                    node.value = arr[i];
+                    root.rightChild = &node;
+                }
             }
-
+           
             if (arr[i] == root.value && &root != nullptr) {
                 node node;
                 node.value = arr[i];
@@ -68,7 +74,7 @@ public:
             }
 
         }
-       
+        size = sizeof(tree);
         return tree;
     }
 
@@ -83,8 +89,8 @@ public:
         return 0;
     };
 
-    node getNode(int value) {
-
+    node getNode(int value, ternaryTree tree) {
+        //for (int i = 0; i < tree)
     }
 };
 
