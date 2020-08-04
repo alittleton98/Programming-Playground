@@ -1,0 +1,3 @@
+﻿  TripleX.cpp
+F:\Users\Littleton\Dev\Programming-Playground\C++ Programs\Triple X\Triple X\TripleX.cpp(11): warning C4172: returning address of local variable or temporary: solutionArr
+  Triple X.vcxproj -> F:\Users\Littleton\Dev\Programming-Playground\C++ Programs\Triple X\Triple X\x64\Debug\Triple X.exe

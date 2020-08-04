@@ -1,0 +1,2 @@
+F:\Users\Littleton\Dev\Programming-Playground\C++ Programs\Triple X\Triple X\x64\Debug\Triple X.exe
+F:\Users\Littleton\Dev\Programming-Playground\C++ Programs\Triple X\Triple X\x64\Debug\Triple X.pdb
