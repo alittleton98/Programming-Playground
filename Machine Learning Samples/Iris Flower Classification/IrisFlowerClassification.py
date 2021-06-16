@@ -1,3 +1,4 @@
+# From Tutorial: https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
 # Load Libraries
 import numpy
 import pandas
@@ -91,7 +92,7 @@ print(testY)
 array = dataset.values
 x = array[:, 0:4]  # Take all rows and the first 4 columns
 y = array[:, 4]  # take all rows and only the 5th column
-X_Train, X_Validation, Y_Train, Y_Validatation = train_test_split(
+X_Train, X_Validation, Y_Train, Y_Validation = train_test_split(
     x, y, test_size=0.2, random_state=1)
 
 # Testing Harness
@@ -130,6 +131,29 @@ for name, model in models:
 numpy.savetxt("pythonalgorithmresults.csv", numpy.column_stack((names, results)),
               delimiter=",", fmt='%s')
 # Plot comparison
-pyplot.boxplot(results, labels=names)
+""" pyplot.boxplot(results, labels=names)
 pyplot.title('Algorithm Comparison')
-pyplot.show()
+pyplot.show() """
+
+# Predications
+""" We must choose an algorithm to use to make predictions.
+The results in the previous section suggest that the SVM was perhaps the most accurate model. We will use this model as our final model.
+Now we want to get an idea of the accuracy of the model on our validation set.
+This will give us an independent final check on the accuracy of the best model.
+It is valuable to keep a validation set just in case you made a slip during training, such as overfitting to the training set or a data leak. 
+Both of these issues will result in an overly optimistic result. """
+
+# Make predictions on validation dataset
+model = SVC(gamma='auto')
+model.fit(X_Train, Y_Train)
+predictions = model.predict(X_Validation)
+
+# Evaluate predictions
+print(accuracy_score(Y_Validation, predictions))
+print(confusion_matrix(Y_Validation, predictions))
+print(classification_report(Y_Validation, predictions))
+
+# Conclusion
+""" Need to learn how to read and adequately understand the statistical mathematics 
+    behind these algorithms. They make sense to generate validations on already existing data,
+    but how to apply them to an actually learning model? """
