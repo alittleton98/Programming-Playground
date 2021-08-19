@@ -1,2 +1,4 @@
-﻿  FrequencyGame.cpp
-  FrequencyGame.vcxproj -> D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\C++PracticeProblems\Debug\FrequencyGame.exe
+﻿D:\Program FIles (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (FrequencyGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  PracticeProblems.cpp
+D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\PracticeProblems.cpp(61,6): warning C4101: 'SafeFloor': unreferenced local variable
+  FrequencyGame.vcxproj -> D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\C++PracticeProblems\Debug\PracticeProblems.exe

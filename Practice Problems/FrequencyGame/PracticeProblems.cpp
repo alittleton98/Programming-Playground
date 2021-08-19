@@ -55,3 +55,10 @@ int FrequencyGame(int* A, int n) {
 	}
 	return largestElement;
 }
+
+int EggDroppingPuzzle(int N, int K) {
+	int MinimumMoves = 0;
+	int SafeFloor;
+
+	return MinimumMoves;
+}
