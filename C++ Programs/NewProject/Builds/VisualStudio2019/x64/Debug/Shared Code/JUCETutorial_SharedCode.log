@@ -1,0 +1,26 @@
+﻿  PluginProcessor.cpp
+  PluginEditor.cpp
+  include_juce_audio_basics.cpp
+  include_juce_audio_devices.cpp
+  include_juce_audio_formats.cpp
+  include_juce_audio_plugin_client_utils.cpp
+  include_juce_audio_processors.cpp
+  include_juce_audio_utils.cpp
+  include_juce_core.cpp
+  include_juce_data_structures.cpp
+  include_juce_events.cpp
+  include_juce_graphics.cpp
+  include_juce_gui_extra.cpp
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(80,55): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(84,66): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(89,82): warning C4100: 'newName': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(89,55): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(94,70): warning C4100: 'samplesPerBlock': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(94,54): warning C4100: 'sampleRate': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(132,98): warning C4100: 'midiMessages': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(155,15): warning C4189: 'channelData': local variable is initialized but not referenced
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(173,72): warning C4100: 'destData': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(180,75): warning C4100: 'sizeInBytes': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Source\PluginProcessor.cpp(180,65): warning C4100: 'data': unreferenced formal parameter
+  include_juce_gui_basics.cpp
+  JUCETutorial_SharedCode.vcxproj -> D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\NewProject\Builds\VisualStudio2019\x64\Debug\Shared Code\NewProject.lib

@@ -1,2 +1,0 @@
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\C++PracticeProblems\Debug\PracticeProblems.exe.lastcodeanalysissucceeded
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\Debug\NativeCodeAnalysis.read.1.tlog
