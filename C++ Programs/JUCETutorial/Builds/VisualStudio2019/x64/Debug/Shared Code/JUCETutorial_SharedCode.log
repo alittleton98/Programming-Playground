@@ -1,0 +1,13 @@
+﻿  PluginProcessor.cpp
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(80,57): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(84,68): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(89,84): warning C4100: 'newName': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(89,57): warning C4100: 'index': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(94,72): warning C4100: 'samplesPerBlock': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(94,56): warning C4100: 'sampleRate': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(135,10): warning C4189: 'totalNumInputChannels': local variable is initialized but not referenced
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(136,10): warning C4189: 'totalNumOutputChannels': local variable is initialized but not referenced
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(190,74): warning C4100: 'destData': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(197,77): warning C4100: 'sizeInBytes': unreferenced formal parameter
+D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Source\PluginProcessor.cpp(197,67): warning C4100: 'data': unreferenced formal parameter
+  JUCETutorial_SharedCode.vcxproj -> D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Builds\VisualStudio2019\x64\Debug\Shared Code\JUCETutorial.lib
