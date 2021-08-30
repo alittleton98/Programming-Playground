@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plot
+from matplotlib.colors import ListedColormap
 
 
 IrisDataframe = pd.read_csv('Iris Flower Classification\iris.csv', header=None)
@@ -74,7 +75,80 @@ class Perceptron(object):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
 
-# Get values from iris data frame from rows 0-99 and from column 4
+def plot_decision_regions(X, y, classifier, resolution=0.02):
+
+    # setup marker generator and color map
+    markers = ('s', 'x', 'o', '^', 'v')
+    colors = ('red', 'blue', 'lightgreen', 'gray', 'cyan')
+    cmap = ListedColormap(colors[:len(np.unique(y))])
+
+    # plot the decision surface
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),
+                           np.arange(x2_min, x2_max, resolution))
+    Z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
+    Z = Z.reshape(xx1.shape)
+    plot.contourf(xx1, xx2, Z, alpha=0.3, cmap=cmap)
+    plot.xlim(xx1.min(), xx1.max())
+    plot.ylim(xx2.min(), xx2.max())
+
+    # plot class samples
+    for idx, cl in enumerate(np.unique(y)):
+        plot.scatter(x=X[y == cl, 0],
+                     y=X[y == cl, 1],
+                     alpha=0.8,
+                     c=colors[idx],
+                     marker=markers[idx],
+                     label=cl,
+                     edgecolor='black')
+
+
+# Get values from iris data frame from rows 0-100 and from column 4
+# gets the setosa and the versicolor iris samples (setosa belongs to rows 0-51, versicolor belongs to the remaining rows)
 y = IrisDataframe.iloc[0:100, 4].values
 # set the target value to 1 or negative 1 if it is setosa
 y = np.where(y == 'Iris-setosa', -1, 1)
+
+# Extract sepal length and petal length (rows 0-100 and columns 0 and 2)
+X = IrisDataframe.iloc[0:100, [0, 2]].values
+print(X)
+# plot data
+# plots the first fifty rows in each column with
+plot.scatter(X[:50, 0], X[:50, 1],
+             color='red', marker='o', label='Setosa')
+# plots the remaining rows
+plot.scatter(X[50:100, 0], X[50:100, 1],
+             color='blue', marker='x', label='versicolor')
+
+plot.xlabel('sepal length [cm]')
+plot.ylabel('petal length [cm]')
+plot.legend(loc='upper left')
+
+plot.savefig('Iris_SetosaVersicolor_SepalPetal_Scatter', dpi=300)
+plot.show()
+
+# Train perceptron model
+# create perceptron object with learning rate (eta) of 0.1 that will iterate over the set 10 times
+IrisPtron = Perceptron(eta=0.1, n_iterations=10)
+# fit the samples against the target values
+IrisPtron.fit(X, y)
+
+# plot the model
+# plot the errors
+plot.plot(range(1, len(IrisPtron.errors_) + 1), IrisPtron.errors_, marker='o')
+plot.xlabel('Epochs')
+plot.ylabel('Number of Updates')
+plot.savefig('MisclassificationErrors vs Epochs.png', dpi=300)
+plot.show()
+
+# plot decision regions on original graph
+plot_decision_regions(X, y, classifier=IrisPtron)
+plot.xlabel('sepal length [cm]')
+plot.ylabel('petal length [cm]')
+plot.legend(loc='upper left')
+
+
+plot.savefig(
+    'Iris_SetosaVersicolorDescisionRegions_SepalPetal_Scatter', dpi=300)
+plot.show()
