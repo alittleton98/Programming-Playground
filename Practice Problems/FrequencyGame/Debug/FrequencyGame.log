@@ -1,7 +1,0 @@
-﻿D:\Program FIles (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (FrequencyGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  PracticeProblems.cpp
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\PracticeProblems.cpp(75,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\PracticeProblems.cpp(117,24): warning C4018: '<': signed/unsigned mismatch
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\PracticeProblems.cpp(131,21): warning C4018: '<': signed/unsigned mismatch
-D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\FrequencyGame\PracticeProblems.cpp(135,25): warning C4018: '<': signed/unsigned mismatch
-  FrequencyGame.vcxproj -> D:\Users\Mordecai\Dev\Programming-Playground\Practice Problems\C++PracticeProblems\Debug\PracticeProblems.exe
