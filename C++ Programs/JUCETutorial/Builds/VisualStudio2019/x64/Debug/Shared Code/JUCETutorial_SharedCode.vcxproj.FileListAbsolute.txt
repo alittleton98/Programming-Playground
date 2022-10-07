@@ -1,1 +1,0 @@
-D:\Users\Mordecai\Dev\Programming-Playground\C++ Programs\JUCETutorial\Builds\VisualStudio2019\x64\Debug\Shared Code\JUCETutorial.lib

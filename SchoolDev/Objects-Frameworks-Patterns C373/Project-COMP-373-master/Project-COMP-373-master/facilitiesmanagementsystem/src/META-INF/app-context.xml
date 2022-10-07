@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<description>Wiring the dependencies for the Facility Management System.</description>
+
+	<context:component-scan base-package="main.java" />
+	
+	<bean id="building" class="main.java.facility.Building" scope="prototype"/>
+	<bean id="facility" class="main.java.facility.Facility" scope="prototype">
+		<property name = "buildingCluster">
+			<util:list list-class="java.util.ArrayList" value-type="main.java.facility.Building">
+    			<ref bean="building" />
+			</util:list>
+		</property>
+		<property name = "facilityMaintenanceRequests">
+			<list>
+            	<ref bean="maintenanceRequest" />
+            </list>
+		</property>
+		<property name = "facilityInspections">
+			<list>
+            	<ref bean="inspection" />
+            </list>
+		</property>
+	</bean>
+	
+	<bean id="facilityManager" class="main.java.facility.FacilityManager" scope="prototype">
+		<property name = "FacilitiesList">
+			<list>
+            	<ref bean="facility" />
+            </list>
+		</property>
+		<property name = "availableFacilities">
+			<list>
+            	<ref bean="facility" />
+            </list>
+		</property>
+	</bean>
+
+	<bean id="observer" class="main.java.facility.Observer" scope="prototype"/>
+	
+	<bean id="facilityOperationsManager" class="main.java.operations.FacilityOperationsManager" scope="prototype">
+		<property name = "userList">
+			<list>
+            	<ref bean="user" />
+            </list>
+		</property>
+		<property name = "maintenanceRequestsList">
+			<list>
+            	<ref bean="maintenanceRequest" />
+            </list>
+		</property>
+		<property name = "observers">
+			<list>
+            	<ref bean="observer" />
+            </list>
+		</property>
+	</bean>
+
+	<bean id="subject" class="main.java.operations.Subject" scope="prototype"/>
+
+    <bean id="maintenanceRequest" class="main.java.maintenance.MaintenanceRequest" scope="prototype"/>
+	
+    <bean id="inspection" class="main.java.use.Inspection" scope="prototype"/>
+    <bean id="user" class="main.java.use.User" scope="prototype"/>
+	
+</beans>
